@@ -1,0 +1,1 @@
+{"pageProps":{"posts":[{"slug":"another","frontmatter":{"title":"This is a another blog post","date":"2022-09-11","excerpt":"This is a string again"}},{"slug":"test","frontmatter":{"title":"This is a test blog post","date":"2022-09-10","excerpt":"This is a string"}}]},"__N_SSG":true}
