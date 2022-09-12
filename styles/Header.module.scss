@@ -1,0 +1,25 @@
+@use "./variables.scss";
+
+.main {
+  width: 100%;
+  padding: 0.5em;
+  border: variables.$border;
+
+  display: flex;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    stroke: variables.$primary;
+    height: 15px;
+    width: 20px;
+  }
+}

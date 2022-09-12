@@ -1,0 +1,40 @@
+@use "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+html,
+body {
+  background: linear-gradient(135deg, #40a6d2 0%, #d13cea 100%);
+
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+  color: #ffffff;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: variables.$max;
+}
+
+a {
+  color: inherit;
+}
+
+// Need to figure out how this dark theme stuff works
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }
