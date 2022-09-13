@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";

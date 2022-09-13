@@ -1,0 +1,37 @@
+@use "./variables.scss";
+
+.header {
+  display: flex;
+  height: max-content;
+}
+
+.main {
+  width: 100%;
+  border: variables.$border;
+  border-left: none;
+
+  display: flex;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+  }
+  overflow: hidden;
+}
+
+.btn {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0.6em 0.3em;
+
+  border: variables.$border;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  span {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+  }
+}
