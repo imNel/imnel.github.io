@@ -6,17 +6,24 @@
 }
 
 .main {
+  &_outer {
+    border: variables.$border;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+    &_active {
+      border-right: variables.$border;
+    }
+  }
   width: 100%;
-  border: variables.$border;
-  border-left: none;
-
+  padding: 0.5em;
   display: flex;
   gap: 20px;
 
   a {
     text-decoration: none;
+    cursor: pointer;
   }
-  overflow: hidden;
 }
 
 .btn {
