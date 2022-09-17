@@ -1,9 +1,58 @@
+@use "./variables.scss";
+
 .container {
+  margin: 0 auto;
+  max-width: variables.$max;
   padding: 0 2rem;
 }
 
+.feature {
+  &_list {
+    list-style-image: url("/powerline.svg");
+    li {
+      font-size: 2rem;
+    }
+  }
+
+  &_image {
+    $image-size: 350px;
+    $gap-size: 10px;
+    $border-size: 2px;
+    $overflow-size: $image-size + $gap-size * 2 - $border-size * 2;
+    $shadow-offset: 10px;
+
+    width: fit-content;
+
+    position: relative;
+    margin: 0 $shadow-offset $shadow-offset 0;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $image-size;
+      height: $image-size;
+      overflow: hidden;
+      img {
+        z-index: 10;
+      }
+      img,
+      div {
+        border: $gap-size dashed variables.$primary;
+        min-width: $overflow-size;
+        min-height: $overflow-size;
+      }
+    }
+
+    &_bg {
+      position: absolute;
+      top: $shadow-offset;
+      left: $shadow-offset;
+    }
+  }
+}
+
 .main {
-  min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
