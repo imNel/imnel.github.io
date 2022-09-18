@@ -6,13 +6,8 @@
   font-family: Raleway;
 }
 
-html,
 body {
-  background: linear-gradient(135deg, #40a6d2 0%, #d13cea 100%);
-
-  padding: 0;
-  margin: 0;
-
+  position: relative;
   min-height: 100%;
   color: #ffffff;
 }
@@ -21,6 +16,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: variables.$max;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: -100;
+  background: linear-gradient(135deg, #40a6d2 0%, #d13cea 100%);
 }
 
 a {

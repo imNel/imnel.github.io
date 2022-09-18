@@ -8,19 +8,28 @@ import { sortByDate } from "../utils";
 const Home: NextPage = ({ posts }: any) => {
   return (
     <div className={style.container}>
-      <ul className={style.feature_list}>
-        <li>test</li>
-        <li>test</li>
-      </ul>
-      <div className={style.feature_image}>
-        <div>
-          <img src="me.png" />
+      <section className={style.feature}>
+        <ul className={style.feature_list}>
+          <li>Hey! I'm Nel</li>
+          <li>I’m a Frontend Dev & UI/UX Designer.</li>
+          <li>
+            I have passionate interests in Linux and FOSS, and I’m looking to
+            contribute more in my free time.
+          </li>
+        </ul>
+        <div style={{ flex: 0.3 }}>
+          <div className={style.feature_image}>
+            <div>
+              <img src="me.png" />
+            </div>
+            <div className={style.feature_image_bg}>
+              <div></div>
+            </div>
+          </div>
+          <div className={style.feature_image_caption}>Me and Roxy!</div>
         </div>
-        <div className={style.feature_image_bg}>
-          <div></div>
-        </div>
-      </div>
-      <div>
+      </section>
+      <div style={{ overflow: "hidden" }}>
         posts
         {posts.map((post: any, index: any) => (
           <h2 key={"post_" + index}>{post.frontmatter.title}</h2>
