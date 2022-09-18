@@ -5,6 +5,8 @@ $gap: 20px;
 .header {
   display: flex;
   height: max-content;
+  position: fixed;
+  width: 100%;
 }
 
 .main {
@@ -37,8 +39,8 @@ $gap: 20px;
 }
 
 .btn {
-  min-width: 60px;
-  min-height: 60px;
+  min-width: variables.$header-height;
+  min-height: variables.$header-height;
   padding: 15px 10px;
 
   border: variables.$border;
