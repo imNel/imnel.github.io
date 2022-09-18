@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         style={{ transform: `translateY(${y * 0.5}px)` }} // Experimental Parallaxing
       ></div>
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps} y={y} />
     </>
   );
 }

@@ -5,6 +5,8 @@ $gap: 20px;
 .header {
   display: flex;
   height: max-content;
+  position: fixed;
+  width: 100%;
 }
 
 .main {
