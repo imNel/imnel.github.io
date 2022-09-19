@@ -4,3 +4,4 @@
 - start work on projects page
 - fix menu overlap bug
 - add particles for parallax
+- add skip to main content link
