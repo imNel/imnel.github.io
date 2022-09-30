@@ -59,7 +59,7 @@ const Home: NextPage = ({ posts, y }: any) => {
         >
           <div className={style.feature_image}>
             <div>
-              <img src="me.png" />
+              <img src="me.png" alt="Selfie of me" />
             </div>
             <div
               style={{ transform: `translateY(${y * -0.05}px)` }}
