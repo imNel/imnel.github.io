@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <div
         className="background"
-        style={{ transform: `translateY(${y * 0.5}px)` }} // Experimental Parallaxing
       ></div>
       <Header />
       <Component {...pageProps} y={y} />
