@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import style from "../styles/Home.module.scss";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { sortByDate } from "../utils";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const featureList = {
   parent: {
@@ -26,7 +23,7 @@ const featureList = {
   },
 };
 
-const Home: NextPage = ({ posts, y }: any) => {
+const Home: NextPage = ({ y }: any) => {
   return (
     <div className={style.container}>
       <section className={style.feature}>
@@ -49,6 +46,9 @@ const Home: NextPage = ({ posts, y }: any) => {
           <motion.li variants={featureList.child}>
             I have passionate interests in Linux and FOSS, and I’m looking to
             contribute more in my free time.
+          </motion.li>
+          <motion.li variants={featureList.child}>
+            While you’re here, check out my <Link href="/blog"><a>blog!</a></Link>
           </motion.li>
         </motion.ul>
         <motion.div
@@ -73,41 +73,8 @@ const Home: NextPage = ({ posts, y }: any) => {
           </div>
         </motion.div>
       </section>
-      <div style={{ overflow: "hidden" }}>
-        posts
-        {posts.map((post: any, index: any) => (
-          <h2 key={"post_" + index}>{post.frontmatter.title}</h2>
-        ))}
-      </div>
     </div>
   );
 };
 
 export default Home;
-
-export async function getStaticProps() {
-  // Getting files from posts dir
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf8"
-    );
-
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-
-  return {
-    props: {
-      posts: posts.sort(sortByDate),
-    },
-  };
-}

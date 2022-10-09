@@ -10,7 +10,7 @@ const Header = () => {
   const [activeDelayed, setActiveDelayed] = useState(false);
 
   // Gonna just update this accordingly, just be glad its not a magic number :)
-  const numberOfNavElements = 3;
+  const numberOfNavElements = 2;
 
   // Delayed state to apply CSS after animation
   useEffect(() => {
@@ -35,7 +35,7 @@ const Header = () => {
       >
         <div className={style.main}>
           <HeaderLink href="/" display="Home" />
-          <HeaderLink href="/projects" display="Projects" />
+          {/* <HeaderLink href="/projects" display="Projects" /> */}
           <HeaderLink href="/blog" display="Blog" />
         </div>
       </motion.div>

@@ -1,0 +1,9 @@
+@use "./variables.scss";
+
+.container {
+  margin: 0 auto;
+  max-width: variables.$max;
+  padding: 2rem;
+  padding-top: calc(2rem + variables.$header-height);
+  
+}
