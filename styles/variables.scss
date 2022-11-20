@@ -1,6 +1,11 @@
-$max: 1300px;
 $primary: #ffffff;
 
 $header-height: 60px;
 
 $border: solid 2px $primary;
+
+// Breakpoints
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$max: 1280px;
