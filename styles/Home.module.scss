@@ -17,9 +17,6 @@ $gap: 10px;
 
   &_list {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: $gap;
     flex: 0.5;
     list-style-image: url("/powerline.svg");
     padding-left: 52px;
@@ -29,10 +26,10 @@ $gap: 10px;
   }
 
   &_image {
-    $image-size: 350px;
+    --image-size: 350px;
     $gap-size: 10px;
     $border-size: 2px;
-    $overflow-size: $image-size + $gap-size * 2 - $border-size * 2;
+    $overflow-size: calc(var(--image-size) + $gap-size * 2 - $border-size * 2);
     $shadow-offset: 10px;
 
     width: fit-content;
@@ -44,8 +41,8 @@ $gap: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: $image-size;
-      height: $image-size;
+      width: var(--image-size);
+      height: var(--image-size);
       overflow: hidden;
       img {
         z-index: 10;
@@ -72,22 +69,35 @@ $gap: 10px;
   }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media screen and (max-width: variables.$lg) {
+  .feature {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    &_list,
+    div {
+      flex: unset;
+    }
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media screen and (max-width: variables.$md) {
+  .feature {
+    &_list > li {
+      font-size: 1.8rem;
+    }
+    &_image {
+      --image-size: 250px;
+    }
   }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
+}
+
+@media screen and (max-width: variables.$sm) {
+  .feature {
+    &_list > li {
+      font-size: 1.4rem;
+    }
+    &_image {
+      --image-size: 250px;
+    }
   }
 }
