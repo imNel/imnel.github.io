@@ -69,7 +69,7 @@ const Home: NextPage = ({ posts, y }: any) => {
             </div>
           </div>
           <div className={style.feature_image_caption}>
-            Me and <a href="/roxy">Roxy!</a>
+            Me and <a href="https://imnel.github.io/roxy">Roxy!</a>
           </div>
         </motion.div>
       </section>
