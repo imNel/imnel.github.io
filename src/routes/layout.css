@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import '@fontsource/instrument-serif/400.css';
+
+@theme {
+	--font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+
+	/* Flat White :D */
+	--color-bg: hsl(35, 25%, 86%);
+	--color-text: #493d2c;
+	--color-accent: color-mix(in srgb, var(--color-text), var(--color-bg) 10%);
+
+	--color-orange-text: hsl(35, 15%, 31%);
+	--color-orange-bg: hsla(35, 100%, 47%, 0.18);
+
+	--color-green-text: hsl(71, 12%, 30%);
+	--color-green-bg: hsla(78, 100%, 37%, 0.19);
+
+	--color-teal-text: hsl(161, 12%, 31%);
+	--color-teal-bg: hsla(172, 100%, 37%, 0.15);
+
+	--color-blue-text: hsl(220, 12%, 34%);
+	--color-blue-bg: hsla(220, 100%, 73%, 0.2);
+
+	--color-purple-text: hsl(300, 12%, 34%);
+	--color-purple-bg: hsla(282, 100%, 68%, 0.15);
+}
+
+.graph-paper {
+	background-color: var(--color-bg);
+	opacity: 0.15;
+	background-image:
+		repeating-linear-gradient(
+			to right,
+			transparent 0,
+			transparent 1.6666666666666667px,
+			var(--color-bg) 1.6666666666666667px,
+			var(--color-bg) 5px,
+			transparent 5px,
+			transparent 6.666666666666667px
+		),
+		repeating-linear-gradient(
+			to bottom,
+			transparent 0,
+			transparent 1.6666666666666667px,
+			var(--color-bg) 1.6666666666666667px,
+			var(--color-bg) 5px,
+			transparent 5px,
+			transparent 6.666666666666667px
+		),
+		linear-gradient(to bottom, var(--color-text) 0.6px, transparent 0.6px),
+		linear-gradient(to right, var(--color-text) 0.6px, transparent 0.6px);
+	background-size:
+		100% 100%,
+		100% 100%,
+		20px 20px,
+		20px 20px;
+	background-position:
+		0 0,
+		0 0,
+		0 -0.2px,
+		-0.2px 0;
+}
