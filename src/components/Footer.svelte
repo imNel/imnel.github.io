@@ -6,7 +6,7 @@
 		<li>
 			<a
 				class="underline underline-offset-4"
-				href="https://github.com/imNel/portfolio"
+				href="https://github.com/imNel/imNel.github.io"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
