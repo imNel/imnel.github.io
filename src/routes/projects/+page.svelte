@@ -26,7 +26,7 @@
 		title="this site"
 		role="developer"
 		tags={['sveltekit', 'github pages']}
-		href="https://github.com/imNel/portfolio"
+		href="https://github.com/imNel/imnel.github.io"
 		label="View Source"
 	>
 		<p>The site</p>
