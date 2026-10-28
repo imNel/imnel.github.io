@@ -24,6 +24,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="alternate" type="application/rss+xml" title="Blog" href="/blog/rss.xml" />
 	<link rel="preload" href={instrumentSerif} as="font" type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
