@@ -28,8 +28,8 @@
 	<link rel="preload" href={instrumentSerif} as="font" type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
-<div class="graph-paper absolute inset-0 z-[-1]"></div>
-<div class="flex min-h-screen flex-col">
+<div class="relative flex min-h-screen flex-col">
+	<div class="graph-paper absolute inset-0 z-[-1]"></div>
 	<TopNav />
 	<div class="mx-auto flex w-full max-w-3xl flex-1 flex-col p-4">
 		{@render children()}
