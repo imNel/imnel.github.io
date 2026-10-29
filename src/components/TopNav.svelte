@@ -13,9 +13,9 @@
 		page.url.pathname === href || page.url.pathname.startsWith(`${href}/`);
 </script>
 
-<nav class="mx-auto w-full max-w-3xl p-4 font-serif text-3xl tracking-wide uppercase">
+<nav class="mx-auto w-full max-w-3xl p-4 font-serif text-2xl tracking-wide uppercase sm:text-3xl">
 	<ul data-sveltekit-preload-data class="flex gap-4">
-		<li class="flex-1 opacity-60">Nel</li>
+		<li class="hidden flex-1 opacity-60 sm:block">Nel</li>
 		{#each links as { href, label } (href)}
 			<li>
 				<a
