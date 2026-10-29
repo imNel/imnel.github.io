@@ -1,4 +1,4 @@
-<footer class="mx-auto w-full max-w-6xl p-4">
+<footer class="mx-auto w-full max-w-3xl p-4">
 	<ul class="flex justify-end gap-4 font-mono text-sm">
 		<li>
 			<a class="underline underline-offset-2" href="/blog/rss.xml">Blog RSS</a>
