@@ -1,11 +1,11 @@
 <footer class="mx-auto w-full max-w-6xl p-4">
 	<ul class="flex justify-end gap-4 font-mono text-sm">
 		<li>
-			<a class="underline underline-offset-4" href="/blog/rss.xml">Blog RSS</a>
+			<a class="underline underline-offset-2" href="/blog/rss.xml">Blog RSS</a>
 		</li>
 		<li>
 			<a
-				class="underline underline-offset-4"
+				class="underline underline-offset-2"
 				href="https://github.com/imNel/imNel.github.io"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -15,7 +15,7 @@
 		</li>
 		<li>
 			<a
-				class="underline underline-offset-4"
+				class="underline underline-offset-2"
 				href="https://github.com/biletskyy/flatwhite-syntax"
 				target="_blank"
 				rel="noopener noreferrer"
