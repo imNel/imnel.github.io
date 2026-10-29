@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { SITE_TITLE } from '#lib/site.js';
+	import Tags from '../../components/Tags.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -22,7 +23,7 @@
 					{post.date}
 				</time>
 			</div>
-			<p class="mt-2 font-mono leading-relaxed">{post.description}</p>
+			<div class="mt-4"><Tags tags={post.tags} /></div>
 		</li>
 	{/each}
 </ul>

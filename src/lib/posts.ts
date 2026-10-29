@@ -1,9 +1,22 @@
-import { marked } from 'marked';
+import { Marked } from 'marked';
+import { markedHighlight } from 'marked-highlight';
+import hljs from 'highlight.js';
+
+const marked = new Marked(
+	markedHighlight({
+		emptyLangClass: 'hljs',
+		langPrefix: 'hljs language-',
+		highlight(code, lang) {
+			const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+			return hljs.highlight(code, { language }).value;
+		}
+	})
+);
 
 export type Post = {
 	slug: string;
 	title: string;
-	description: string;
+	tags: string[];
 	date: string;
 	body: string;
 };
@@ -27,7 +40,11 @@ function parse(path: string, raw: string): Post {
 	return {
 		slug,
 		title: meta.title ?? slug,
-		description: meta.description ?? '',
+		tags:
+			meta.tags
+				?.split(',')
+				.map((t) => t.trim())
+				.filter(Boolean) ?? [],
 		date: meta.date ?? '',
 		body: match ? raw.slice(match[0].length) : raw
 	};
@@ -38,7 +55,7 @@ const posts = Object.entries(files)
 	.sort((a, b) => b.date.localeCompare(a.date));
 
 export function getPosts() {
-	return posts.map(({ slug, title, description, date }) => ({ slug, title, description, date }));
+	return posts.map(({ slug, title, tags, date }) => ({ slug, title, tags, date }));
 }
 
 export function getPost(slug: string) {

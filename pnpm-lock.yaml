@@ -11,6 +11,12 @@ importers:
       '@fontsource/ia-writer-duo':
         specifier: ^5.3.0
         version: 5.3.0
+      highlight.js:
+        specifier: ^11.12.0
+        version: 11.12.0
+      marked-highlight:
+        specifier: ^2.2.4
+        version: 2.2.4(marked@18.1.1)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -694,6 +700,10 @@ packages:
     resolution: {integrity: sha512-iZyKG96/JwPz1N55vj2Ie2vXbhu440zfUfJvSwEqEbeLluk7NnapfGqa7LH0mOsnDxTF85Mx8/dyR6HfqcbmbQ==}
     engines: {node: '>=20'}
 
+  highlight.js@11.12.0:
+    resolution: {integrity: sha512-nbfWpyRMcMrPMmDwJB+dhX/eiaPKtc2RB+0QZskqJ3WjRA/FDS0e9hZrx8EC/lbEv8gXy98FcDbNa/dspAaJMg==}
+    engines: {node: '>=12.0.0'}
+
   hookified@1.15.1:
     resolution: {integrity: sha512-MvG/clsADq1GPM2KGo2nyfaWVyn9naPiXrqIe4jYjXNZQt238kWyOGrsyc/DmRAQ+Re6yeo6yX/yoNCG5KAEVg==}
 
@@ -902,6 +912,11 @@ packages:
 
   magic-string@1.4.3:
     resolution: {integrity: sha512-z12OxmaPGE0F4xlpGdjuAUckipLpQlTAuAmyGhNoD7ODpYUzvDfvtxUbjM/jwznyP178oju/KDdyi220wNJ0RQ==}
+
+  marked-highlight@2.2.4:
+    resolution: {integrity: sha512-PZxisNMJDduSjc0q6uvjsnqqHCXc9s0eyzxDO9sB1eNGJnd/H1/Fu+z6g/liC1dfJdFW4SftMwMlLvsBhUPrqQ==}
+    peerDependencies:
+      marked: '>=4 <19'
 
   marked@18.1.1:
     resolution: {integrity: sha512-zEGgrtUG8crk+TrMacJSVABU4DYDDkS8uqgU3ohrn/2fW9C2AEfUrO3m6IhpIpQpl7YcVpiXXC9cSMWDANT3dg==}
@@ -1816,6 +1831,8 @@ snapshots:
     dependencies:
       hookified: 1.15.1
 
+  highlight.js@11.12.0: {}
+
   hookified@1.15.1: {}
 
   hookified@2.2.0: {}
@@ -1968,6 +1985,10 @@ snapshots:
   magic-string@1.4.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
+
+  marked-highlight@2.2.4(marked@18.1.1):
+    dependencies:
+      marked: 18.1.1
 
   marked@18.1.1: {}
 
