@@ -11,29 +11,29 @@
 <ul class="mt-2">
 	<ProjectTile
 		title="monorepo.nvim"
-		role="maintainer"
-		tags={['lua', 'neovim', 'DX']}
+		role="author"
+		tags={['lua', 'neovim', 'dx']}
 		href="https://github.com/imNel/monorepo.nvim"
 		label="View Source"
 	>
-		<p>A monorepo manager for neovim built with telescope.nvim in mind.</p>
+		<p>Switch between projects in a monorepo without leaving neovim. Built with <i>telescope.nvim</i> in mind.</p>
 	</ProjectTile>
 	<ProjectTile
 		title="tsubi.club"
 		role="developer"
-		tags={['react', 'cloudflare workers', 'shopify headless']}
+		tags={['next.js', 'cloudflare workers', 'shopify headless']}
 		href="https://tsubi.club"
 		label="View Site"
 	>
-		<p>The website</p>
+		<p>Storefront and blog for the musician <i>tsubi club</i>. Built by small team of devs with Next.js on Cloudflare Workers.</p>
 	</ProjectTile>
 	<ProjectTile
 		title="this site"
-		role="developer"
-		tags={['sveltekit', 'github pages']}
+		role="author"
+		tags={['sveltekit', 'tailwind', 'github pages']}
 		href="https://github.com/imNel/imnel.github.io"
 		label="View Source"
 	>
-		<p>The site</p>
+		<p>The site you're on! A statically generated site & blog built using SvelteKit's SSG adapter.</p>
 	</ProjectTile>
 </ul>
