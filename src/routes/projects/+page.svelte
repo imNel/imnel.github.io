@@ -1,6 +1,11 @@
 <script>
+	import { SITE_TITLE } from '#lib/site.js';
 	import ProjectTile from '../../components/ProjectTile.svelte';
 </script>
+
+<svelte:head>
+	<title>Projects - {SITE_TITLE}</title>
+</svelte:head>
 
 <h1 class="font-serif text-5xl tracking-wide uppercase">Projects</h1>
 <ul class="mt-2">

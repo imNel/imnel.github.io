@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import { SITE_TITLE } from '#lib/site.js';
 
 	let notFound = $derived(page.status === 404);
 </script>
 
 <svelte:head>
-	<title>{page.status} · Nel</title>
+	<title>{page.status} - {SITE_TITLE}</title>
 </svelte:head>
 
 <h1 class="font-serif text-5xl tracking-wide uppercase">

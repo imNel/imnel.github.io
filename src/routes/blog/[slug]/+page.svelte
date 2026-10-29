@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { SITE_TITLE } from '#lib/site.js';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
-	<title>{data.post.title} · Nel</title>
+	<title>{data.post.title} - {SITE_TITLE}</title>
 	{#if data.post.description}
 		<meta name="description" content={data.post.description} />
 	{/if}
