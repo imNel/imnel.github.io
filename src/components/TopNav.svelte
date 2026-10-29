@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import ThemeSwitcher from './ThemeSwitcher.svelte';
+	import SocialLinks from './SocialLinks.svelte';
 
 	const links = [
 		{ href: resolve('/'), label: 'Home' },
@@ -30,7 +30,7 @@
 				</a>
 			</li>
 		{/each}
-		<li class="flex-1 text-end opacity-60"><ThemeSwitcher /></li>
+		<li class="flex flex-1 items-center justify-end"><SocialLinks /></li>
 	</ul>
 </nav>
 
