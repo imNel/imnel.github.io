@@ -13,7 +13,7 @@
 </svelte:head>
 
 <article class="mx-auto w-full max-w-3xl">
-	<a class="font-mono text-sm underline underline-offset-4" href={resolve('/blog')}>Back</a>
+	<a class="font-mono text-sm underline underline-offset-2" href={resolve('/blog')}>Back</a>
 	<header class="mt-4">
 		<h1 class="font-serif text-5xl tracking-wide uppercase">{data.post.title}</h1>
 		<time class="font-mono text-xs tracking-widest uppercase opacity-60" datetime={data.post.date}
@@ -54,7 +54,7 @@
 	}
 	.prose :global(a) {
 		text-decoration: underline;
-		text-underline-offset: 4px;
+		text-underline-offset: 2px;
 	}
 	.prose :global(:not(pre) > code) {
 		background: var(--color-orange-bg);

@@ -1,8 +1,13 @@
 @import 'tailwindcss';
 @import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/ia-writer-duo/400.css';
+@import '@fontsource/ia-writer-duo/400-italic.css';
+@import '@fontsource/ia-writer-duo/700.css';
+@import '@fontsource/ia-writer-duo/700-italic.css';
 
 @theme {
 	--font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+	--font-mono: 'iA Writer Duo', ui-monospace, SFMono-Regular, Menlo, monospace;
 
 	/* Flat White :D */
 	--color-bg: hsl(35, 25%, 86%);

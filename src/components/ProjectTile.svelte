@@ -24,7 +24,7 @@
 			{/each}
 		</ul>
 		<a
-			class="font-mono text-sm underline underline-offset-4"
+			class="font-mono text-sm underline underline-offset-2"
 			{href}
 			target="_blank"
 			rel="noopener noreferrer">{label}</a

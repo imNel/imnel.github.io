@@ -14,5 +14,5 @@
 </h1>
 <p class="py-4 font-mono leading-relaxed">
 	Sorry, {notFound ? "this page doesn't exist." : (page.error?.message ?? 'something went wrong.')}
-	<a class="underline underline-offset-4" href={resolve('/')}>Return to home.</a>
+	<a class="underline underline-offset-2" href={resolve('/')}>Return to home.</a>
 </p>
