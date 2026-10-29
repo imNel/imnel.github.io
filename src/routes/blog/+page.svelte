@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { SITE_TITLE } from '#lib/site.js';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
-	<title>Blog · Nel</title>
+	<title>Blog - {SITE_TITLE}</title>
 </svelte:head>
 
 <h1 class="font-serif text-5xl tracking-wide uppercase">Blog</h1>

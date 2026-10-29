@@ -1,5 +1,9 @@
+<script lang="ts">
+	import { SITE_TITLE } from '#lib/site.js';
+</script>
+
 <svelte:head>
-	<title>Nel</title>
+	<title>Home - {SITE_TITLE}</title>
 </svelte:head>
 
 <section class="mx-auto flex max-w-3xl flex-1 flex-col justify-center text-center">
