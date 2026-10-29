@@ -1,7 +1,7 @@
 ---
 title: Zustand: Straight Forward State Management
 date: 2023-03-31
-description: State management in React doesn't have to be complex.
+tags: react, typescript
 ---
 
 When you think of implementing a state management system in React,

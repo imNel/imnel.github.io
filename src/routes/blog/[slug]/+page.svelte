@@ -8,9 +8,6 @@
 
 <svelte:head>
 	<title>{data.post.title} - {SITE_TITLE}</title>
-	{#if data.post.description}
-		<meta name="description" content={data.post.description} />
-	{/if}
 </svelte:head>
 
 <article class="mx-auto w-full max-w-3xl">
@@ -66,6 +63,31 @@
 		overflow-x: auto;
 		border: 1px solid color-mix(in srgb, var(--color-text) 40%, transparent);
 		padding: 1rem;
+    background: var(--color-pre-bg);
+	}
+	.prose :global(.hljs-keyword) {
+		color: var(--color-purple-text);
+		background: var(--color-purple-bg);
+	}
+	.prose :global(:is(.hljs-string, .hljs-regexp)) {
+		color: var(--color-green-text);
+		background: var(--color-green-bg);
+	}
+	.prose :global(:is(.hljs-number, .hljs-literal)) {
+		color: var(--color-teal-text);
+		background: var(--color-teal-bg);
+	}
+	.prose :global(:is(.hljs-symbol, .hljs-name)) {
+		color: var(--color-blue-text);
+		background: var(--color-blue-bg);
+	}
+	.prose :global(:is(.hljs-subst, .hljs-attr)) {
+		color: var(--color-orange-text);
+		background: var(--color-orange-bg);
+	}
+	.prose :global(.hljs-comment) {
+		font-style: italic;
+		opacity: 0.6;
 	}
 	.prose :global(blockquote) {
 		border-left: 1px solid color-mix(in srgb, var(--color-text) 40%, transparent);

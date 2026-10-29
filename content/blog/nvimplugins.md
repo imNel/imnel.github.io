@@ -1,7 +1,7 @@
 ---
 title: The beauty of Neovim: The API
 date: 2023-07-22
-description: I've been using neovim for a while now, but only recently do I think I've unlocked the true power of the editor, making your own plugins.
+tags: neovim, lua
 ---
 
 I've been using neovim for a while now, but only recently do I think

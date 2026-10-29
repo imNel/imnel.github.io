@@ -14,10 +14,10 @@ export const GET: RequestHandler = () => {
 	const items = getPosts()
 		.map((post) => {
 			const url = `${SITE_URL}/blog/${post.slug}`;
+			const categories = post.tags.map((tag) => `\n			<category>${escape(tag)}</category>`).join('');
 			return `
 		<item>
-			<title>${escape(post.title)}</title>
-			<description>${escape(post.description)}</description>
+			<title>${escape(post.title)}</title>${categories}
 			<pubDate>${new Date(post.date).toUTCString()}</pubDate>
 			<link>${url}</link>
 			<guid isPermaLink="true">${url}</guid>
