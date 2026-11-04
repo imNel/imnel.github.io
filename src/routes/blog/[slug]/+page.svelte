@@ -24,6 +24,8 @@
 			<Tags tags={data.post.tags} />
 		</div>
 	</header>
+	<!-- Posts are our own markdown, so this is fine. -->
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<div class="prose mt-8 font-mono leading-relaxed">{@html data.post.html}</div>
 </article>
 
