@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { SITE_TITLE } from '#lib/site.js';
+	import Tags from '../../../components/Tags.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -11,36 +12,61 @@
 </svelte:head>
 
 <article class="mx-auto w-full max-w-3xl">
-	<a class="font-mono text-sm underline underline-offset-2" href={resolve('/blog')}>Back</a>
-	<header class="mt-4">
-		<h1 class="font-serif text-5xl tracking-wide uppercase">{data.post.title}</h1>
-		<time class="font-mono text-xs tracking-widest uppercase opacity-60" datetime={data.post.date}
-			>{data.post.date}</time
-		>
+	<a class="font-mono text-sm underline underline-offset-2" href={resolve('/blog')}>← Blog</a>
+	<header class="mt-4 border-b border-text/40 pb-6">
+		<h1 class="font-serif text-5xl leading-tight tracking-wide text-balance uppercase">
+			{data.post.title}
+		</h1>
+		<div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+			<time class="font-mono text-xs tracking-widest uppercase opacity-60" datetime={data.post.date}
+				>{data.post.date}</time
+			>
+			<Tags tags={data.post.tags} />
+		</div>
 	</header>
-	<!-- Posts are our own markdown from /content, so rendering raw HTML is fine. -->
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<div class="prose mt-8 font-mono leading-relaxed">{@html data.post.html}</div>
 </article>
 
 <style>
-	.prose :global(:where(h1, h2, h3, h4)) {
+	.prose :global(:where(p, ul, ol, blockquote)) {
+		margin-top: 1rem;
+	}
+	.prose :global(:where(pre)),
+	.prose :global(:where(pre) + *) {
+		margin-top: 1.5rem;
+	}
+	.prose :global(:where(hr)),
+	.prose :global(:where(hr) + *) {
 		margin-top: 2rem;
-		font-family: var(--font-serif);
-		letter-spacing: var(--tracking-wide);
-		text-transform: uppercase;
 	}
-	.prose :global(h1) {
-		font-size: var(--text-4xl);
+	.prose :global(:where(h1, h2, h3, h4, h5, h6)) {
+		margin-top: 2.5rem;
+		font-family: var(--font-mono);
+		font-weight: 400;
+		line-height: 1.3;
+		text-wrap: balance;
 	}
-	.prose :global(h2) {
+	.prose :global(:where(h1, h2, h3, h4, h5, h6) + *) {
+		margin-top: 0.75rem;
+	}
+	.prose :global(:where(li + li, li > ul, li > ol)) {
+		margin-top: 0.25rem;
+	}
+	.prose > :global(:first-child) {
+		margin-top: 0;
+	}
+
+	.prose :global(:where(h1)) {
 		font-size: var(--text-3xl);
 	}
-	.prose :global(h3) {
+	.prose :global(:where(h2)) {
 		font-size: var(--text-2xl);
 	}
-	.prose :global(:where(p, ul, ol, pre, blockquote)) {
-		margin-top: 1rem;
+	.prose :global(:where(h3)) {
+		font-size: var(--text-xl);
+	}
+	.prose :global(:where(h4, h5, h6)) {
+		font-size: var(--text-lg);
 	}
 	.prose :global(ul) {
 		list-style: square;
@@ -61,9 +87,11 @@
 	}
 	.prose :global(pre) {
 		overflow-x: auto;
-		border: 1px solid color-mix(in srgb, var(--color-text) 40%, transparent);
 		padding: 1rem;
 		background: var(--color-pre-bg);
+		font-size: var(--text-sm);
+		line-height: 1.5;
+		tab-size: 2;
 	}
 	.prose :global(.hljs-keyword) {
 		color: var(--color-purple-text);
@@ -95,7 +123,6 @@
 		opacity: 0.8;
 	}
 	.prose :global(hr) {
-		margin-top: 2rem;
 		border-color: color-mix(in srgb, var(--color-text) 40%, transparent);
 	}
 	.prose :global(img) {
