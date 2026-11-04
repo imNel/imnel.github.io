@@ -63,7 +63,7 @@
 		overflow-x: auto;
 		border: 1px solid color-mix(in srgb, var(--color-text) 40%, transparent);
 		padding: 1rem;
-    background: var(--color-pre-bg);
+		background: var(--color-pre-bg);
 	}
 	.prose :global(.hljs-keyword) {
 		color: var(--color-purple-text);

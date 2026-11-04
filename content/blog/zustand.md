@@ -34,11 +34,11 @@ In zustand, we can make something similar by creating a hook using `create()`.
 In this case our hook is called `useCounterStore()`.
 
 ```typescript
-import { create } from "zustand";
+import { create } from 'zustand';
 
 export const useCounterStore = create((set) => ({
-  number: 0,
-  setNumber: (number: number) => set(() => ({ number: number })),
+	number: 0,
+	setNumber: (number: number) => set(() => ({ number: number }))
 }));
 ```
 
@@ -63,27 +63,27 @@ I've switched up the context of the state from a counter to a profile here, as i
 I haven't experimented with it much but I like idea of having two seperate types, one for Data and one for Setters and then merge them together in the create function.
 
 ```typescript
-import { create } from "zustand";
+import { create } from 'zustand';
 
 // Type for the store data
 type ProfileData = {
-  name?: string;
-  id?: string;
+	name?: string;
+	id?: string;
 };
 
 // Type for the store setter functions
 type ProfileSetters = {
-  setName: (name: string) => void;
-  setId: (id: string) => void;
+	setName: (name: string) => void;
+	setId: (id: string) => void;
 };
 
 // Merging types here to access both
 export const useProfileStore = create<ProfileData & ProfileSetters>((set) => ({
-  name: undefined,
-  id: undefined,
+	name: undefined,
+	id: undefined,
 
-  setName: (name: string) => set(() => ({ name: name })),
-  setId: (id: string) => set(() => ({ id: id })),
+	setName: (name: string) => set(() => ({ name: name })),
+	setId: (id: string) => set(() => ({ id: id }))
 }));
 ```
 
@@ -99,9 +99,8 @@ function MyComponent() {
 }
 ```
 
-Well, that's all I wanted to share! :) 
+Well, that's all I wanted to share! :)
 
-I Hope this tutorial inspired you to check out zustand! 
+I Hope this tutorial inspired you to check out zustand!
 This was something I instantly wanted to share with people as soon as I saw it and it gave me a good excuse to write my first blog post about it.
 Hopefully I'll be writing more soon, I've got so many tools to share!
-

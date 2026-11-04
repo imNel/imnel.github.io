@@ -16,7 +16,10 @@
 		href="https://github.com/imNel/monorepo.nvim"
 		label="View Source"
 	>
-		<p>Switch between projects in a monorepo without leaving neovim. Built with <i>telescope.nvim</i> in mind.</p>
+		<p>
+			Switch between projects in a monorepo without leaving neovim. Built with <i>telescope.nvim</i> in
+			mind.
+		</p>
 	</ProjectTile>
 	<ProjectTile
 		title="tsubi.club"
@@ -25,7 +28,10 @@
 		href="https://tsubi.club"
 		label="View Site"
 	>
-		<p>Storefront and blog for the musician <i>tsubi club</i>. Built by small team of devs with Next.js on Cloudflare Workers.</p>
+		<p>
+			Storefront and blog for the musician <i>tsubi club</i>. Built by small team of devs with
+			Next.js on Cloudflare Workers.
+		</p>
 	</ProjectTile>
 	<ProjectTile
 		title="this site"
@@ -34,6 +40,8 @@
 		href="https://github.com/imNel/imnel.github.io"
 		label="View Source"
 	>
-		<p>The site you're on! A statically generated site & blog built using SvelteKit's SSG adapter.</p>
+		<p>
+			The site you're on! A statically generated site & blog built using SvelteKit's SSG adapter.
+		</p>
 	</ProjectTile>
 </ul>

@@ -8,7 +8,7 @@
 	{#each links as { label, href, icon } (href)}
 		<li>
 			<a
-				class="block size-6 opacity-60 transition-opacity hover:opacity-100 [&>svg]:size-full [&_path]:fill-text"
+				class="block size-6 opacity-60 transition-opacity hover:opacity-100 [&_path]:fill-text [&>svg]:size-full"
 				{href}
 				aria-label={label}
 				title={label}
